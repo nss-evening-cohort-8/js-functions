@@ -24,3 +24,26 @@ console.log(nomnom('callan', 'crap'));  // callan devoured crap
 console.log(nomnom('pink', 'blue')); // pink devoured blue
 
 console.log(nomnom('red')); // red devoured undefined
+
+
+// function numberAdder that takes in a number and
+// return the number plus 3.  so input=22, output = 25
+const numberAdder = (num) => {
+  const finalNumber = num + 3;
+  printToDom(`<h2>${finalNumber}</h2>`, 'allTheNumbers');
+};
+
+const printToDom = (stringToPrint, divId) => {
+  // const selectedDiv = document.getElementById('allTheNumbers');
+  const selectedDiv = document.getElementById(divId);
+  selectedDiv.innerHTML += stringToPrint;
+};
+
+numberAdder(22); // 25
+numberAdder(2); // 5
+numberAdder(4);
+numberAdder(6);
+numberAdder(12);
+
+
+printToDom('I am ready for lunch', 'feelings');
